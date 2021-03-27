@@ -15,7 +15,7 @@ module.exports = {
             data: {
                 validation: {
                     args: Jade.object({
-                        text: Jade.string().required(),
+                        equation: Jade.string().required(),
                     }),
                     failAction: 'error',
                 },
