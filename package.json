@@ -1,0 +1,14 @@
+{
+  "name": "calc",
+  "version": "1.0.0",
+  "description": "Calculation plugin for botsocket",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "S6ad0w",
+  "license": "ISC",
+  "dependencies": {
+    "mathjs": "^9.3.0"
+  }
+}
