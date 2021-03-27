@@ -1,2 +1,2 @@
 # calc
-Calculation plugin for BotSocket
+botsocket.com
