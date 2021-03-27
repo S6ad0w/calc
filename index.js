@@ -22,9 +22,6 @@ module.exports = {
                 handler: async (message, { args: { equation }, flags: { channel } }) => {
 
                     let c = message.channel;
-                    function numberGen(min, max) { 
-                        return Math.floor(Math.random() * (max - min + 1) + min);
-                    }
 
                     if (channel) {
 
