@@ -11,7 +11,7 @@ module.exports = {
             name: 'calc',
             alias: ['calc', 'calculate'],
             args: ['equation'],
-            flags: ['channel'],
+            flags: [''],
             data: {
                 validation: {
                     args: Jade.object({
@@ -19,24 +19,9 @@ module.exports = {
                     }),
                     failAction: 'error',
                 },
-                handler: async (message, { args: { equation }, flags: { channel } }) => {
+                handler: async (message, { args: { equation } }) => {
 
                     let c = message.channel;
-
-                    if (channel) {
-
-                        if (message.client.channels.cache.has(channel)) {
-
-                            c = message.client.channels.cache.get(channel);
-                        }
-                        else {
-
-                            const match = channel.match(/<#(\d{17,19})>/);
-                            if (message.client.channels.cache.has(match[1])) {
-                                c = message.client.channels.cache.get(match[1]);
-                            }
-                        }
-                    }
 
                     try {
                         if(!equation) return c.send('Please provide an equation');
